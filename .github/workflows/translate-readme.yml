@@ -6,12 +6,6 @@ on:
       - main
     paths:
       - 'README.md'
-  workflow_run:
-    workflows: ["Update Hackathon Information & Sync README"]
-    types:
-      - completed
-    branches:
-      - main
   workflow_dispatch:  # Manual trigger as backup
 
 jobs:
@@ -19,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    # Only run if the triggering workflow was successful and README.md was changed
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # Run for push events or manual dispatch
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     
     steps:
     - name: Checkout code
@@ -32,36 +26,16 @@ jobs:
     - name: Check if README.md was changed
       id: check-readme
       run: |
-        # Get the commit SHA from the triggering workflow
-        TRIGGER_SHA="${{ github.event.workflow_run.head_sha }}"
-        CURRENT_SHA="${{ github.sha }}"
+        echo "Event type: ${{ github.event_name }}"
         
-        echo "Trigger SHA: $TRIGGER_SHA"
-        echo "Current SHA: $CURRENT_SHA"
-        
-        # For workflow_run, we need to check if README.md exists and has recent changes
-        # Since we're in a separate workflow, we'll check if README.md exists and is recent
-        if [ -f README.md ]; then
-          echo "README.md exists"
-          # Check if README.md was modified recently (within last 5 minutes)
-          README_MTIME=$(stat -c %Y README.md 2>/dev/null || stat -f %m README.md 2>/dev/null)
-          CURRENT_TIME=$(date +%s)
-          TIME_DIFF=$((CURRENT_TIME - README_MTIME))
-          
-          echo "README.md modification time: $README_MTIME"
-          echo "Current time: $CURRENT_TIME"
-          echo "Time difference: $TIME_DIFF seconds"
-          
-          if [ $TIME_DIFF -lt 300 ]; then  # 5 minutes = 300 seconds
-            echo "readme_changed=true" >> $GITHUB_OUTPUT
-            echo "README.md was recently modified"
-          else
-            echo "readme_changed=false" >> $GITHUB_OUTPUT
-            echo "README.md was not recently modified"
-          fi
+        if [ "${{ github.event_name }}" = "push" ]; then
+          # For push events, README.md was definitely changed
+          echo "readme_changed=true" >> $GITHUB_OUTPUT
+          echo "README.md was changed via push event"
         else
-          echo "readme_changed=false" >> $GITHUB_OUTPUT
-          echo "README.md does not exist"
+          # For workflow_dispatch, always run
+          echo "readme_changed=true" >> $GITHUB_OUTPUT
+          echo "Manual trigger - running translation"
         fi
     
     - name: Set up Python environment
