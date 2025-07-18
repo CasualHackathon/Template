@@ -31,13 +31,32 @@ jobs:
         TRIGGER_SHA="${{ github.event.workflow_run.head_sha }}"
         CURRENT_SHA="${{ github.sha }}"
         
-        # Check if README.md was changed in the triggering commit
-        if git diff --name-only $TRIGGER_SHA~1 $TRIGGER_SHA | grep -q "^README\.md$"; then
-          echo "readme_changed=true" >> $GITHUB_OUTPUT
-          echo "README.md was changed in the triggering workflow"
+        echo "Trigger SHA: $TRIGGER_SHA"
+        echo "Current SHA: $CURRENT_SHA"
+        
+        # For workflow_run, we need to check if README.md exists and has recent changes
+        # Since we're in a separate workflow, we'll check if README.md exists and is recent
+        if [ -f README.md ]; then
+          echo "README.md exists"
+          # Check if README.md was modified recently (within last 5 minutes)
+          README_MTIME=$(stat -c %Y README.md 2>/dev/null || stat -f %m README.md 2>/dev/null)
+          CURRENT_TIME=$(date +%s)
+          TIME_DIFF=$((CURRENT_TIME - README_MTIME))
+          
+          echo "README.md modification time: $README_MTIME"
+          echo "Current time: $CURRENT_TIME"
+          echo "Time difference: $TIME_DIFF seconds"
+          
+          if [ $TIME_DIFF -lt 300 ]; then  # 5 minutes = 300 seconds
+            echo "readme_changed=true" >> $GITHUB_OUTPUT
+            echo "README.md was recently modified"
+          else
+            echo "readme_changed=false" >> $GITHUB_OUTPUT
+            echo "README.md was not recently modified"
+          fi
         else
           echo "readme_changed=false" >> $GITHUB_OUTPUT
-          echo "README.md was not changed in the triggering workflow"
+          echo "README.md does not exist"
         fi
     
     - name: Set up Python environment
