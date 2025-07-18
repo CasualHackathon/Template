@@ -1,6 +1,11 @@
 name: Auto Translate README to Chinese
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
   workflow_run:
     workflows: ["Update Hackathon Information & Sync README"]
     types:
