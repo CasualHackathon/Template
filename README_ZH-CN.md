@@ -11,7 +11,7 @@
 
 | 活动           | 时间                  | 形式    | 回顾                |
 | --------------- | --------------------- | --------- | ------------------------------ |
-| 🗓 **开放日**  | July 11, 21:14 (UTC+8) | 📍 线上 | [Play ▶️](https://example.com/) |
+| 🗓 **开放日**  | July 11, 21:16 (UTC+8) | 📍 线上 | [Play ▶️](https://example.com/) |
 | 🏁 **演示日** | July 13, 18:00 (UTC+8) | 📍 线上 |   [Play ▶️](https://example.com/)  |
 
 
@@ -19,7 +19,7 @@
 
 #### 👤 Bob
 
-`💬 Telegram: @bob_solidity21xxuyy`  `🔧 Solidity Developer`  `🕐 UTC+8`  
+`💬 Telegram: @bob_solidity21`  `🔧 Solidity Developer`  `🕐 UTC+8`  
 - *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
 ##### 项目： Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_最后更新： 2025-07-18 12:35:42_
+_最后更新： 2025-07-18 12:41:09_
