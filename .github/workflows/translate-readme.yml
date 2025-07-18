@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - 'README.md'
+  workflow_run:
+    workflows: ["Update Hackathon Information & Sync README"]
+    types:
+      - completed
+    branches:
+      - main
   workflow_dispatch:  # Manual trigger as backup
 
 jobs:
@@ -13,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    # Run for push events or manual dispatch
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    # Run for push events, successful workflow_run events, or manual dispatch
+    if: github.event_name == 'push' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') || github.event_name == 'workflow_dispatch'
     
     steps:
     - name: Checkout code
@@ -32,6 +38,19 @@ jobs:
           # For push events, README.md was definitely changed
           echo "readme_changed=true" >> $GITHUB_OUTPUT
           echo "README.md was changed via push event"
+        elif [ "${{ github.event_name }}" = "workflow_run" ]; then
+          # For workflow_run events, check if README.md was modified in the triggering workflow
+          TRIGGER_SHA="${{ github.event.workflow_run.head_sha }}"
+          echo "Trigger workflow SHA: $TRIGGER_SHA"
+          
+          # Check if README.md was changed in the triggering commit
+          if git diff --name-only $TRIGGER_SHA~1 $TRIGGER_SHA | grep -q "^README\.md$"; then
+            echo "readme_changed=true" >> $GITHUB_OUTPUT
+            echo "README.md was changed in the triggering workflow"
+          else
+            echo "readme_changed=false" >> $GITHUB_OUTPUT
+            echo "README.md was not changed in the triggering workflow"
+          fi
         else
           # For workflow_dispatch, always run
           echo "readme_changed=true" >> $GITHUB_OUTPUT
