@@ -43,13 +43,27 @@ jobs:
           TRIGGER_SHA="${{ github.event.workflow_run.head_sha }}"
           echo "Trigger workflow SHA: $TRIGGER_SHA"
           
-          # Check if README.md was changed in the triggering commit
-          if git diff --name-only $TRIGGER_SHA~1 $TRIGGER_SHA | grep -q "^README\.md$"; then
-            echo "readme_changed=true" >> $GITHUB_OUTPUT
-            echo "README.md was changed in the triggering workflow"
+          # Get the commit range to check
+          PREV_SHA=$(git rev-parse $TRIGGER_SHA~1 2>/dev/null || echo "")
+          if [ -n "$PREV_SHA" ]; then
+            echo "Previous SHA: $PREV_SHA"
+            echo "Current SHA: $TRIGGER_SHA"
+            
+            # Check if README.md was changed in the triggering commit
+            CHANGED_FILES=$(git diff --name-only $PREV_SHA $TRIGGER_SHA)
+            echo "Changed files: $CHANGED_FILES"
+            
+            if echo "$CHANGED_FILES" | grep -q "^README\.md$"; then
+              echo "readme_changed=true" >> $GITHUB_OUTPUT
+              echo "README.md was changed in the triggering workflow"
+            else
+              echo "readme_changed=false" >> $GITHUB_OUTPUT
+              echo "README.md was not changed in the triggering workflow"
+            fi
           else
-            echo "readme_changed=false" >> $GITHUB_OUTPUT
-            echo "README.md was not changed in the triggering workflow"
+            # If we can't get previous SHA, assume README.md was changed
+            echo "readme_changed=true" >> $GITHUB_OUTPUT
+            echo "Could not determine previous SHA, assuming README.md was changed"
           fi
         else
           # For workflow_dispatch, always run
@@ -61,6 +75,18 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
+        
+    - name: Debug current state
+      run: |
+        echo "=== Current Repository State ==="
+        echo "Current branch: $(git branch --show-current)"
+        echo "Current commit: $(git rev-parse HEAD)"
+        echo "README.md exists: $([ -f README.md ] && echo 'Yes' || echo 'No')"
+        echo "README_ZH-CN.md exists: $([ -f README_ZH-CN.md ] && echo 'Yes' || echo 'No')"
+        echo "=== Recent commits ==="
+        git log --oneline -5
+        echo "=== README.md content preview ==="
+        head -5 README.md
     
     - name: Run Chinese translation script
       if: steps.check-readme.outputs.readme_changed == 'true'
