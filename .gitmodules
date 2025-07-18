@@ -4,3 +4,6 @@
 [submodule "submission/GasDaddy/contracts/lib/openzeppelin-contracts"]
 	path = submission/GasDaddy/contracts/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "participants/Bob/project"]
+	path = participants/Bob/project
+	url = https://github.com/BiscuitCoder/pod_audit.git
