@@ -35,7 +35,7 @@
     <td align="center">团队</td>
     <td align="center">alice, bob</td>
     <td align="center">30%</td>
-    <td align="center">⏳ 进行中</td>
+    <td align="center">✅ 已提交</td>
     <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_最后更新： 2025-07-18 13:10:03_
+_最后更新： 2025-07-18 13:42:14_

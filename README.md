@@ -35,7 +35,7 @@
     <td align="center">Team</td>
     <td align="center">alice, bob</td>
     <td align="center">30%</td>
-    <td align="center">⏳ Active</td>
+    <td align="center">✅ Submitted</td>
     <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 13:10:03_
+_Last updated: 2025-07-18 13:42:14_
