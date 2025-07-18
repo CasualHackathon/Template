@@ -89,16 +89,32 @@ def scan_participants_directory():
                 participant_folders.append((item_path, creation_time))
     
     # Sort by creation time (oldest first - ascending order)
-    participant_folders.sort(key=lambda x: x[1])
+    # Use reverse=False to ensure ascending order (oldest first)
+    # This ensures that participants who registered first appear first
+    participant_folders.sort(key=lambda x: x[1], reverse=False)
     
-    print(f"Participants sorted by creation time:")
+    # Verify sorting order
+    if len(participant_folders) > 1:
+        first_time = participant_folders[0][1]
+        last_time = participant_folders[-1][1]
+        if first_time > last_time:
+            print("WARNING: Sorting may be incorrect! First participant time > Last participant time")
+            print(f"First: {datetime.fromtimestamp(first_time).strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"Last: {datetime.fromtimestamp(last_time).strftime('%Y-%m-%d %H:%M:%S')}")
+        else:
+            print("✓ Sorting verified: ascending order (oldest first)")
+    
+    print(f"Participants sorted by creation time (ascending - oldest first):")
     for item_path, creation_time in participant_folders:
         folder_name = os.path.basename(item_path)
         creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
         print(f"  {folder_name}: {creation_date}")
     
     # Parse participant files in sorted order
-    for item_path, _ in participant_folders:
+    print(f"Processing participants in order:")
+    for i, (item_path, _) in enumerate(participant_folders):
+        folder_name = os.path.basename(item_path)
+        print(f"  {i+1}. {folder_name}")
         readme_path = os.path.join(item_path, 'README.md')
         data = parse_participant_file(readme_path)
         if data and data['type'] == 'registration':
