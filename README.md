@@ -11,7 +11,7 @@
 
 | Event           | Time                  | Format    | Recap                |
 | --------------- | --------------------- | --------- | ------------------------------ |
-| 🗓 **Open Day**  | July 11, 21:00 (UTC+8) | 📍 Online | [Play ▶️](https://example.com/) |
+| 🗓 **Open Day**  | July 11, 21:10 (UTC+8) | 📍 Online | [Play ▶️](https://example.com/) |
 | 🏁 **Demo Day** | July 13, 18:00 (UTC+8) | 📍 Online |   [Play ▶️](https://example.com/)  |
 
 
@@ -19,7 +19,7 @@
 
 #### 👤 Bob
 
-`💬 Telegram: @bob_solidity21xx`  `🔧 Solidity Developer`  `🕐 UTC+8`  
+`💬 Telegram: @bob_solidity21xxu`  `🔧 Solidity Developer`  `🕐 UTC+8`  
 - *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
 ##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 12:23:02_
+_Last updated: 2025-07-18 12:27:45_
