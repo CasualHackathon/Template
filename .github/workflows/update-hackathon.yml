@@ -71,17 +71,13 @@ jobs:
           echo "Updating hackathon participant information..."
           python3 scripts/update_hackathon.py
 
-      - name: Copy README.md to README_ZH-CN.md
-        if: steps.check_files.outputs.readme_changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: |
-          echo "Syncing README.md to README_ZH-CN.md..."
-          python3 scripts/update_hackathon.py --copy-only
+
 
       - name: Check for any changes
         id: check_changes
         run: |
           # Check if there are any file changes
-          if git diff --quiet README.md README_EN.md README_ZH-CN.md; then
+          if git diff --quiet README.md; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No changes to commit"
           else
@@ -97,18 +93,12 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Add all related files
-          git add README.md README_EN.md README_ZH-CN.md
+          git add README.md
           
           # Generate commit message
           commit_msg="🤖 Auto-update: "
           if [[ "${{ steps.check_files.outputs.participants_changed }}" == "true" ]]; then
             commit_msg+="Update participant information"
-          fi
-          if [[ "${{ steps.check_files.outputs.readme_changed }}" == "true" ]]; then
-            if [[ "${{ steps.check_files.outputs.participants_changed }}" == "true" ]]; then
-              commit_msg+=" & "
-            fi
-            commit_msg+="Sync README to ZH-CN"
           fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             commit_msg="🔄 Manual trigger: Update all documentation"
