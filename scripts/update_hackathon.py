@@ -237,7 +237,7 @@ def generate_participants_content(participants):
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
     <th align="center">🏅 NFT Badge </th>
@@ -255,7 +255,7 @@ def generate_participants_content(participants):
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
 </tr>

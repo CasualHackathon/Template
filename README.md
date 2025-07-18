@@ -24,7 +24,7 @@
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
     <th align="center">🏅 NFT Badge </th>
@@ -49,7 +49,7 @@
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
 </tr>
@@ -72,7 +72,7 @@
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
     <th align="center">🏅 NFT Badge </th>
@@ -97,7 +97,7 @@
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
+    <th align="center">💪 Team Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
 </tr>
@@ -164,4 +164,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 15:37:36_
+_Last updated: 2025-07-18 15:46:29_
