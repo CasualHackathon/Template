@@ -17,6 +17,29 @@
 
 ## 📝 Participants
 
+### 👤 David
+
+`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
+*Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
+##### Project: NFT Marketplace
+*A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
+<table>
+<tr>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
+</tr>
+<tr>
+    <td align="center">Solo</td>
+    <td align="center">David</td>
+    <td align="center">25%</td>
+    <td align="center">❌ Unsubmitted</td>
+</tr>
+</table>
+
+---
+
 ### 👤 Bob
 
 `💬 Telegram: @bob_solidity`  `🔧 Solidity Developer`  `🕐 UTC+8`  
@@ -120,4 +143,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 14:24:43_
+_Last updated: 2025-07-18 06:34:34_
