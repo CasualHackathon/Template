@@ -118,20 +118,20 @@ def generate_participants_content(participants):
             members_display = team_members
         else:
             participation_type = "Solo"
-            members_display = name
+            members_display = name if name else "~"
         
         # Progress 只显示 project_progress 字段，不关联是否已提交
         if project_progress:
             progress = project_progress
         else:
-            progress = "未设置"
+            progress = "~"
         
         # 判断状态：如果超过结束时间且未提交，则显示未提交
         if current_time_utc8 > end_time_utc8:
             if project_submitted:
                 status = "✅ Submitted"
             else:
-                status = "❌ 未提交"
+                status = "❌ Unsubmitted"
         else:
             if project_submitted:
                 status = "✅ Submitted"
@@ -145,12 +145,14 @@ def generate_participants_content(participants):
         contact_display = contact
         if contact and contact_method:
             contact_display = f'`💬 {contact_method}: {contact}`'
+        elif not contact or not contact_method:
+            contact_display = "~"
         
         # Generate role display
-        role_display = f'`🔧 {role}`' if role else ''
+        role_display = f'`🔧 {role}`' if role else '~'
         
         # Generate timezone display
-        timezone_display = f'`🕐 {timezone_info}`' if timezone_info else ''
+        timezone_display = f'`🕐 {timezone_info}`' if timezone_info else '~'
         
         # Generate project section
         project_section = ""

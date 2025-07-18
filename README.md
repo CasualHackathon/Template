@@ -35,7 +35,7 @@
     <td align="center">Team</td>
     <td align="center">alice, bob</td>
     <td align="center">30%</td>
-    <td align="center">❌ 未提交</td>
+    <td align="center">❌ Unsubmitted</td>
     <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
@@ -120,4 +120,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 14:14:55_
+_Last updated: 2025-07-18 14:24:43_
