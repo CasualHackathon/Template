@@ -8,7 +8,7 @@ on:
       - 'participants/*/README.md'
       - 'participants/*/project/**'
       - 'materials/NFT/**'
-      # - 'README.md'
+      - 'README.md'
   pull_request:
     branches:
       - main
@@ -72,6 +72,16 @@ jobs:
         run: |
           echo "Updating hackathon participant information..."
           python3 scripts/update_hackathon.py
+          
+      - name: Translate to Chinese (if script exists)
+        if: steps.check_files.outputs.participants_changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          if [ -f "scripts/translate_to_chinese.py" ]; then
+            echo "Translation script found, running translation..."
+            python3 scripts/translate_to_chinese.py
+          else
+            echo "Translation script not found, skipping translation"
+          fi
 
       - name: Check for any changes
         id: check_changes
@@ -85,6 +95,15 @@ jobs:
             echo "Changes detected, will commit"
             git status --porcelain
           fi
+          
+          # Check if Chinese translation was generated
+          if [ -f README_ZH-CN.md ]; then
+            echo "chinese_translation=true" >> $GITHUB_OUTPUT
+            echo "Chinese translation file exists"
+          else
+            echo "chinese_translation=false" >> $GITHUB_OUTPUT
+            echo "Chinese translation file does not exist"
+          fi
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.has_changes == 'true'
@@ -95,13 +114,24 @@ jobs:
           # Add all related files
           git add README.md
           
+          # Add Chinese translation if it exists
+          if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
+            git add README_ZH-CN.md
+          fi
+          
           # Generate commit message
           commit_msg="🤖 Auto-update: "
           if [[ "${{ steps.check_files.outputs.participants_changed }}" == "true" ]]; then
             commit_msg+="Update participant information"
+            if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
+              commit_msg+=" and Chinese translation"
+            fi
           fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             commit_msg="🔄 Manual trigger: Update all documentation"
+            if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
+              commit_msg+=" and Chinese translation"
+            fi
           fi
           
           git commit -m "$commit_msg"
