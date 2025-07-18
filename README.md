@@ -15,12 +15,12 @@
 
 ## 📝 Participants
 
-#### 👤 Alice
+#### 👤 Doubao
 
-`💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
-- *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
-##### Project: Yield Optimizer
-- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
+`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
+- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/Doubao/README.md) 
+##### Project: NFT Marketplace
+- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/Doubao/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -30,9 +30,34 @@
 </tr>
 <tr>
     <td align="center">Solo</td>
-    <td align="center">Alice</td>
-    <td align="center">80%</td>
-    <td align="center">✅ Submitted</td>
+    <td align="center">Doubao</td>
+    <td align="center">25%</td>
+    <td align="center">⏳ Active</td>
+</tr>
+</table>
+
+---
+
+#### 👤 David
+
+`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
+- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
+##### Project: NFT Marketplace
+- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
+<table>
+<tr>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
+    <th align="center">🏅 NFT Badge </th>
+</tr>
+<tr>
+    <td align="center">Solo</td>
+    <td align="center">David</td>
+    <td align="center">25%</td>
+    <td align="center">⏳ Active</td>
+    <td align="center"><img src="./materials/NFT/David.png" alt="David" width="200" /></td>
 </tr>
 </table>
 
@@ -63,26 +88,24 @@
 
 ---
 
-#### 👤 David
+#### 👤 Alice
 
-`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
-- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
-##### Project: NFT Marketplace
-- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
+`💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
+- *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
+##### Project: Yield Optimizer
+- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
     <th align="center">💪 Members</th>
     <th align="center">🏁 Progress</th>
     <th align="center">🌱 Status </th>
-    <th align="center">🏅 NFT Badge </th>
 </tr>
 <tr>
     <td align="center">Solo</td>
-    <td align="center">David</td>
-    <td align="center">25%</td>
-    <td align="center">⏳ Active</td>
-    <td align="center"><img src="./materials/NFT/David.png" alt="David" width="200" /></td>
+    <td align="center">Alice</td>
+    <td align="center">80%</td>
+    <td align="center">✅ Submitted</td>
 </tr>
 </table>
 
@@ -141,4 +164,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 14:51:07_
+_Last updated: 2025-07-18 06:58:35_
