@@ -19,7 +19,7 @@
 
 #### 👤 Bob
 
-`💬 Telegram: @bob_solidity21`  `🔧 Solidity Developer`  `🕐 UTC+8`  
+`💬 Telegram: @bob_solidity21kk`  `🔧 Solidity Developer`  `🕐 UTC+8`  
 - *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
 ##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 12:41:09_
+_Last updated: 2025-07-18 12:47:39_
