@@ -1,7 +1,5 @@
 # Template Casual Hackathon
 
-<!-- [English](./README_EN.md) | [简体中文](./README.md) -->
-
 🧬 The Future of Template Is Calling You!
 
 
