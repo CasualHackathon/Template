@@ -76,15 +76,33 @@ def scan_participants_directory():
         return []
     
     participants = []
-    # Get all subdirectories in participants folder
+    participant_folders = []
+    
+    # Get all subdirectories in participants folder with creation time
     for item in os.listdir(participants_dir):
         item_path = os.path.join(participants_dir, item)
         if os.path.isdir(item_path) and item != 'template':
             readme_path = os.path.join(item_path, 'README.md')
             if os.path.exists(readme_path):
-                data = parse_participant_file(readme_path)
-                if data and data['type'] == 'registration':
-                    participants.append(data)
+                # Get folder creation time (ctime)
+                creation_time = os.path.getctime(item_path)
+                participant_folders.append((item_path, creation_time))
+    
+    # Sort by creation time (oldest first - ascending order)
+    participant_folders.sort(key=lambda x: x[1])
+    
+    print(f"Participants sorted by creation time:")
+    for item_path, creation_time in participant_folders:
+        folder_name = os.path.basename(item_path)
+        creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
+        print(f"  {folder_name}: {creation_date}")
+    
+    # Parse participant files in sorted order
+    for item_path, _ in participant_folders:
+        readme_path = os.path.join(item_path, 'README.md')
+        data = parse_participant_file(readme_path)
+        if data and data['type'] == 'registration':
+            participants.append(data)
     
     return participants
 
