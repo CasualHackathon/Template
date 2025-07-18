@@ -8,7 +8,7 @@ Do not remove the --- markers or change the field names.
 ## 👤 Personal Information (required)
 
 ```yaml
-name: 'David' # Your name or nickname
+name: 'Doubao' # Your name or nickname
 description: 'Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration' # Brief personal introduction including skills and experience (One sentence)
 contact_method: 'Discord' # Contact method: Telegram | WeChat | Discord | Email | X(Twitter) | GitHub
 contact: 'david_web3#5678' # Your contact details, e.g., @username, email@example.com
