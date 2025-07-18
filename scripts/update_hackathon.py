@@ -28,6 +28,28 @@ def check_nft_image_exists(name):
     nft_path = os.path.join(os.getcwd(), 'materials', 'NFT', f'{name}.png')
     return os.path.exists(nft_path)
 
+def get_git_creation_time(file_path):
+    """Get the creation time of a file using Git history."""
+    try:
+        import subprocess
+        # Get the first commit that added this file
+        result = subprocess.run(
+            ['git', 'log', '--follow', '--format=%at', '--reverse', '--', file_path],
+            capture_output=True,
+            text=True,
+            cwd=os.getcwd()
+        )
+        
+        if result.returncode == 0 and result.stdout.strip():
+            # Get the first line (earliest commit)
+            first_commit_time = result.stdout.strip().split('\n')[0]
+            if first_commit_time:
+                return float(first_commit_time)
+    except Exception as e:
+        print(f"Warning: Could not get Git creation time for {file_path}: {e}")
+    
+    return None
+
 def parse_participant_file(file_path):
     """Parse a participant README.md file and extract relevant fields."""
     try:
@@ -84,8 +106,22 @@ def scan_participants_directory():
         if os.path.isdir(item_path) and item != 'template':
             readme_path = os.path.join(item_path, 'README.md')
             if os.path.exists(readme_path):
-                # Get folder creation time (ctime)
-                creation_time = os.path.getctime(item_path)
+                # Try to get creation time using Git history first (most reliable)
+                creation_time = get_git_creation_time(readme_path)
+                if creation_time is None:
+                    # Fallback to file system time
+                    try:
+                        readme_stat = os.stat(readme_path)
+                        creation_time = readme_stat.st_mtime
+                        
+                        # On some systems, we can try to get actual creation time
+                        if hasattr(readme_stat, 'st_birthtime'):  # macOS
+                            creation_time = readme_stat.st_birthtime
+                            
+                    except Exception as e:
+                        print(f"Warning: Could not get creation time for {item_path}: {e}")
+                        creation_time = datetime.now().timestamp()
+                
                 participant_folders.append((item_path, creation_time))
     
     # Sort by creation time (oldest first - ascending order)
