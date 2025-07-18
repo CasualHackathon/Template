@@ -42,7 +42,7 @@
 
 #### 👤 Alice
 
-`💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
+`💬 Discord: alice_web3#12324`  `🔧 Frontend Developer`  `🕐 UTC+8`  
 - *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
 ##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
@@ -90,7 +90,7 @@
 
 #### 👤 Doubao
 
-`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
+`💬 Discord: david_web3#567822`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
 - *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/Doubao/README.md) 
 ##### Project: NFT Marketplace
 - *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/Doubao/project/)  
@@ -164,4 +164,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 15:36:36_
+_Last updated: 2025-07-18 15:37:36_

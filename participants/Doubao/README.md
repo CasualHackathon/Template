@@ -11,7 +11,7 @@ Do not remove the --- markers or change the field names.
 name: 'Doubao' # Your name or nickname
 description: 'Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration' # Brief personal introduction including skills and experience (One sentence)
 contact_method: 'Discord' # Contact method: Telegram | WeChat | Discord | Email | X(Twitter) | GitHub
-contact: 'david_web3#5678' # Your contact details, e.g., @username, email@example.com
+contact: 'david_web3#567822' # Your contact details, e.g., @username, email@example.com
 wallet_address: '0x9ca1f109551bD432803012645Hac136c22C177e8' # Your wallet address or ENS domain on Ethereum mainnet
 role: 'Full-stack Developer' # Primary skill role: Solidity Developer | Frontend Developer | Backend Developer | Full-stack Developer | Product Manager | UI/UX Designer | Test Engineer | Blockchain Researcher | etc.
 timezone: 'UTC+8' # Timezone, e.g., UTC+8, EST, PST (for team collaboration scheduling)
