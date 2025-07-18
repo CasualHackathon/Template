@@ -15,19 +15,17 @@ on:
     paths:
       - 'participants/*/README.md'
       - 'participants/*/project/**'
-      - 'materials/NFT/**'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
   update-and-sync:
-    # Simplified condition: execute on push and manual trigger, check only on PR
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -39,113 +37,39 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Check what files changed
-        id: check_files
-        run: |
-          echo "Checking changed files..."
-          
-          # Check if participants files changed (optimized detection logic)
-          if git diff --name-only HEAD~1 HEAD | grep -q "participants/.*/README\.md\|participants/.*/project/"; then
-            echo "participants_changed=true" >> $GITHUB_OUTPUT
-            echo "Participants files changed"
-            git diff --name-only HEAD~1 HEAD | grep "participants/"
-          else
-            echo "participants_changed=false" >> $GITHUB_OUTPUT
-            echo "No participants file changes"
-          fi
-          
-          # Check if README.md changed
-          if git diff --name-only HEAD~1 HEAD | grep -q "^README\.md$"; then
-            echo "readme_changed=true" >> $GITHUB_OUTPUT
-            echo "README.md changed"
-          else
-            echo "readme_changed=false" >> $GITHUB_OUTPUT
-            echo "README.md not changed"
-          fi
-          
-          # Output all changed files for debugging
-          echo "All changed files:"
-          git diff --name-only HEAD~1 HEAD
-
       - name: Update hackathon information
-        if: steps.check_files.outputs.participants_changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
-          echo "Updating hackathon participant information..."
+          echo "🚀 Updating hackathon participant information..."
           python3 scripts/update_hackathon.py
           
       - name: Translate to Chinese (if script exists)
-        if: steps.check_files.outputs.participants_changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           if [ -f "scripts/translate_to_chinese.py" ]; then
-            echo "Translation script found, running translation..."
+            echo "🌐 Translation script found, running translation..."
             python3 scripts/translate_to_chinese.py
           else
-            echo "Translation script not found, skipping translation"
-          fi
-
-      - name: Check for any changes
-        id: check_changes
-        run: |
-          # Check if there are any file changes
-          if git diff --quiet README.md; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "No changes to commit"
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "Changes detected, will commit"
-            git status --porcelain
-          fi
-          
-          # Check if Chinese translation was generated
-          if [ -f README_ZH-CN.md ]; then
-            echo "chinese_translation=true" >> $GITHUB_OUTPUT
-            echo "Chinese translation file exists"
-          else
-            echo "chinese_translation=false" >> $GITHUB_OUTPUT
-            echo "Chinese translation file does not exist"
+            echo "ℹ️ Translation script not found, skipping translation"
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Add all related files
+          # Add all changed files
           git add README.md
-          
-          # Add Chinese translation if it exists
-          if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
+          if [ -f README_ZH-CN.md ]; then
             git add README_ZH-CN.md
           fi
           
           # Generate commit message
-          commit_msg="🤖 Auto-update: "
-          if [[ "${{ steps.check_files.outputs.participants_changed }}" == "true" ]]; then
-            commit_msg+="Update participant information"
-            if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
-              commit_msg+=" and Chinese translation"
-            fi
-          fi
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            commit_msg="🔄 Manual trigger: Update all documentation"
-            if [[ "${{ steps.check_changes.outputs.chinese_translation }}" == "true" ]]; then
-              commit_msg+=" and Chinese translation"
-            fi
+          commit_msg="🤖 Auto-update: Update participant information"
+          if [ -f README_ZH-CN.md ]; then
+            commit_msg+=" and Chinese translation"
           fi
           
           git commit -m "$commit_msg"
           git pull --rebase origin main
           git push
-
-      - name: Summary
-        run: |
-          echo "## 🎉 Workflow Execution Summary"
-          echo "- Participants files updated: ${{ steps.check_files.outputs.participants_changed }}"
-          echo "- README.md updated: ${{ steps.check_files.outputs.readme_changed }}"
-          echo "- Has changes: ${{ steps.check_changes.outputs.has_changes }}"
-          if [[ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]]; then
-            echo "✅ Documentation has been successfully updated and committed"
-          else
-            echo "ℹ️ No content detected that needs updating"
-          fi
+          
+          echo "✅ Changes committed and pushed successfully!"
