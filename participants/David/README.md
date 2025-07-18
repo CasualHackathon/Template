@@ -29,7 +29,7 @@ team_members: 'David' # Team members, such as: bob, alice
 ```yaml
 project_name: 'NFT Marketplace' # Project name (if you have an idea) or leave empty if undecided
 project_description: 'A decentralized NFT marketplace with advanced trading features and cross-chain compatibility' # Brief description about your project in one sentence
-project_progress: '15%' # The current status of the project
+project_progress: '25%' # The current status of the project
 ```
 
 ## ℹ️ Additional Information (Optional)
