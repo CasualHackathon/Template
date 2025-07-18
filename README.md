@@ -15,12 +15,12 @@
 
 ## 📝 Participants
 
-### 👤 Alice
+#### 👤 Alice
 
 `💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
-*Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
+- *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
 ##### Project: Yield Optimizer
-*A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
+- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -38,12 +38,12 @@
 
 ---
 
-### 👤 Bob
+#### 👤 Bob
 
 `💬 Telegram: @bob_solidity`  `🔧 Solidity Developer`  `🕐 UTC+8`  
-*Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
+- *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
 ##### Project: Yield Optimizer
-*A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
+- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -56,19 +56,19 @@
     <td align="center">Team</td>
     <td align="center">alice, bob</td>
     <td align="center">30%</td>
-    <td align="center">❌ Unsubmitted</td>
+    <td align="center">⏳ Active</td>
     <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
 
 ---
 
-### 👤 David
+#### 👤 David
 
 `💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
-*Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
+- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
 ##### Project: NFT Marketplace
-*A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
+- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -81,7 +81,7 @@
     <td align="center">Solo</td>
     <td align="center">David</td>
     <td align="center">25%</td>
-    <td align="center">❌ Unsubmitted</td>
+    <td align="center">⏳ Active</td>
     <td align="center"><img src="./materials/NFT/David.png" alt="David" width="200" /></td>
 </tr>
 </table>
@@ -141,4 +141,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 14:43:49_
+_Last updated: 2025-07-18 14:51:07_

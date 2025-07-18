@@ -177,7 +177,7 @@ def generate_participants_content(participants):
         if project_name:
             project_section = f"\n##### Project: {project_name}"
             if project_description:
-                project_section += f"\n*{project_description}* [📁](./participants/{name}/project/)"
+                project_section += f"\n- *{project_description}* [📁](./participants/{name}/project/)"
         
         # Generate table with conditional NFT column
         if nft_exists:
@@ -221,18 +221,18 @@ def generate_participants_content(participants):
         
         if is_last:
             # Last participant - no separator
-            participant_content = f"""### 👤 {name}
+            participant_content = f"""#### 👤 {name}
 
 {contact_display}  {role_display}  {timezone_display}  
-*{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
+- *{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
 
 """
         else:
             # Not the last participant - add separator
-            participant_content = f"""### 👤 {name}
+            participant_content = f"""#### 👤 {name}
 
 {contact_display}  {role_display}  {timezone_display}  
-*{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
+- *{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
 
 ---
 
