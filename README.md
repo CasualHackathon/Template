@@ -11,7 +11,7 @@
 
 | Event           | Time                  | Format    | Recap                |
 | --------------- | --------------------- | --------- | ------------------------------ |
-| 🗓 **Open Day**  | July 11, 21:00 (UTC+8) | 📍 Online | [Play ▶️](https://example.com/) |
+| 🗓 **Open Day**  | July 11, 22:00 (UTC+8) | 📍 Online | [Play ▶️](https://example.com/) |
 | 🏁 **Demo Day** | July 13, 18:00 (UTC+8) | 📍 Online |   [Play ▶️](https://example.com/)  |
 
 
