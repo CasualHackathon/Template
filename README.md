@@ -15,12 +15,12 @@
 
 ## 📝 Participants
 
-#### 👤 Alice
+#### 👤 Doubao
 
-`💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
-- *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
-##### Project: Yield Optimizer
-- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
+`💬 Discord: david_web3#567822`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
+- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/Doubao/README.md) 
+##### Project: NFT Marketplace
+- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/Doubao/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -30,34 +30,9 @@
 </tr>
 <tr>
     <td align="center">Solo</td>
-    <td align="center">Alice</td>
-    <td align="center">80%</td>
-    <td align="center">✅ Submitted</td>
-</tr>
-</table>
-
----
-
-#### 👤 Bob
-
-`💬 Telegram: @bob_solidity`  `🔧 Solidity Developer`  `🕐 UTC+8`  
-- *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
-##### Project: Yield Optimizer
-- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
-<table>
-<tr>
-    <th align="center">🧩 Participation</th>
-    <th align="center">💪 Members</th>
-    <th align="center">🏁 Progress</th>
-    <th align="center">🌱 Status </th>
-    <th align="center">🏅 NFT Badge </th>
-</tr>
-<tr>
-    <td align="center">Team</td>
-    <td align="center">alice, bob</td>
-    <td align="center">30%</td>
+    <td align="center">Doubao</td>
+    <td align="center">25%</td>
     <td align="center">⏳ Active</td>
-    <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
 
@@ -88,12 +63,37 @@
 
 ---
 
-#### 👤 Doubao
+#### 👤 Bob
 
-`💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
-- *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/Doubao/README.md) 
-##### Project: NFT Marketplace
-- *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/Doubao/project/)  
+`💬 Telegram: @bob_solidity`  `🔧 Solidity Developer`  `🕐 UTC+8`  
+- *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
+##### Project: Yield Optimizer
+- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
+<table>
+<tr>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
+    <th align="center">🏅 NFT Badge </th>
+</tr>
+<tr>
+    <td align="center">Team</td>
+    <td align="center">alice, bob</td>
+    <td align="center">30%</td>
+    <td align="center">⏳ Active</td>
+    <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
+</tr>
+</table>
+
+---
+
+#### 👤 Alice
+
+`💬 Discord: alice_web3#1234`  `🔧 Frontend Developer`  `🕐 UTC+8`  
+- *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
+##### Project: Yield Optimizer
+- *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
 <table>
 <tr>
     <th align="center">🧩 Participation</th>
@@ -103,9 +103,9 @@
 </tr>
 <tr>
     <td align="center">Solo</td>
-    <td align="center">Doubao</td>
-    <td align="center">25%</td>
-    <td align="center">⏳ Active</td>
+    <td align="center">Alice</td>
+    <td align="center">80%</td>
+    <td align="center">✅ Submitted</td>
 </tr>
 </table>
 
@@ -164,4 +164,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 15:01:03_
+_Last updated: 2025-07-18 07:02:21_
