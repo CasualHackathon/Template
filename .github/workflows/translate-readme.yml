@@ -28,15 +28,6 @@ jobs:
     - name: Run Chinese translation script
       run: |
         python scripts/translate_to_chinese.py
-        
-    - name: Debug file status
-      run: |
-        echo "=== File Status ==="
-        ls -la README_ZH-CN.md
-        echo "=== Git Status ==="
-        git status
-        echo "=== File Content Preview ==="
-        head -5 README_ZH-CN.md
     
     - name: Check for changes
       id: check-changes
