@@ -73,8 +73,6 @@ jobs:
           echo "Updating hackathon participant information..."
           python3 scripts/update_hackathon.py
 
-
-
       - name: Check for any changes
         id: check_changes
         run: |
