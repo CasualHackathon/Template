@@ -2,9 +2,9 @@ import os
 import re
 from datetime import datetime, timezone, timedelta
 
-# 全局配置
-# 结束时间配置 (UTC+8 时区)
-END_TIME_UTC8 = "2025-07-20 18:00:00"  # 格式: YYYY-MM-DD HH:MM:SS
+# Global configuration
+# End time configuration (UTC+8 timezone)
+END_TIME_UTC8 = "2025-07-20 18:00:00"  # Format: YYYY-MM-DD HH:MM:SS
 
 def extract_field(content, field_name):
     """Extract a field value from the content using regex."""
@@ -365,15 +365,15 @@ def update_hackathon():
 if __name__ == '__main__':
     import sys
     
-    # 检查是否有命令行参数
+    # Check if there are command line arguments
     if len(sys.argv) > 1:
         if sys.argv[1] == '--help':
             print("Usage:")
-            print("  python update_hackathon.py                  # 更新参与者信息")
-            print("  python update_hackathon.py --help           # 显示帮助信息")
+            print("  python update_hackathon.py                  # Update participant information")
+            print("  python update_hackathon.py --help           # Display help information")
         else:
             print(f"Unknown argument: {sys.argv[1]}")
             print("Use --help for usage information")
     else:
-        # 执行更新操作
+        # Execute update operation
         update_hackathon()
