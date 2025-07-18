@@ -88,8 +88,6 @@
 </tr>
 </table>
 
----
-
 
 ## 🤝 Co-organizers
 
@@ -145,4 +143,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-18 14:39:47_
+_Last updated: 2025-07-18 14:43:49_

@@ -4,7 +4,7 @@ from datetime import datetime, timezone, timedelta
 
 # 全局配置
 # 结束时间配置 (UTC+8 时区)
-END_TIME_UTC8 = "2025-07-13 18:00:00"  # 格式: YYYY-MM-DD HH:MM:SS
+END_TIME_UTC8 = "2025-07-20 18:00:00"  # 格式: YYYY-MM-DD HH:MM:SS
 
 def extract_field(content, field_name):
     """Extract a field value from the content using regex."""
@@ -216,7 +216,20 @@ def generate_participants_content(participants):
 </table>"""
         
         # Combine all parts with separator only at the bottom
-        participant_content = f"""### 👤 {name}
+        # Check if this is the last participant
+        is_last = (i == len(participants) - 1)
+        
+        if is_last:
+            # Last participant - no separator
+            participant_content = f"""### 👤 {name}
+
+{contact_display}  {role_display}  {timezone_display}  
+*{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
+
+"""
+        else:
+            # Not the last participant - add separator
+            participant_content = f"""### 👤 {name}
 
 {contact_display}  {role_display}  {timezone_display}  
 *{description}* [🔗](./participants/{name}/README.md) {project_section}  {table}
