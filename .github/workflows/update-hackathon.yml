@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      # - 'participants/*/README.md'
-      # - 'participants/*/project/**'
+      - 'participants/*/README.md'
+      - 'participants/*/project/**'
       - 'materials/NFT/**'
       - 'docs/README_EN-US.md'
       - 'docs/README_ZH-CN.md'
