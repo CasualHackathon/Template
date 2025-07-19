@@ -11,7 +11,7 @@ Do not remove the --- markers or change the field names.
 name: 'Bob' # Your name or nickname
 description: 'Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies' # Brief personal introduction including skills and experience (One sentence)
 contact_method: 'Telegram' # Contact method: Telegram | WeChat | Discord | Email | X(Twitter) | GitHub
-contact: '@bob_solidity21k9k_test2...' # Your contact details, e.g., @username, email@example.com
+contact: '@bob_solidity21k9k_test21...' # Your contact details, e.g., @username, email@example.com
 wallet_address: '0x8ba1f109551bD432803012645Hac136c22C177e9' # Your wallet address or ENS domain on Ethereum mainnet
 role: 'Solidity Developer' # Primary skill role: Solidity Developer | Frontend Developer | Backend Developer | Full-stack Developer | Product Manager | UI/UX Designer | Test Engineer | Blockchain Researcher | etc.
 timezone: 'UTC+8' # Timezone, e.g., UTC+8, EST, PST (for team collaboration scheduling)
