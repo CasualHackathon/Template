@@ -8,6 +8,8 @@ on:
       - 'participants/*/README.md'
       - 'participants/*/project/**'
       - 'materials/NFT/**'
+      - 'docs/README_EN-US.md'
+      - 'docs/README_ZH-CN.md'
       - 'README.md'
   pull_request:
     branches:
@@ -37,9 +39,9 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Update hackathon information
+      - name: Update English README
         run: |
-          echo "🚀 Updating hackathon participant information..."
+          echo "🚀 Updating English README with participant information..."
           python3 scripts/update_hackathon.py
           
       - name: Translate to Chinese (if script exists)
@@ -51,22 +53,27 @@ jobs:
             echo "ℹ️ Translation script not found, skipping translation"
           fi
 
+      - name: Set default language (if script exists)
+        run: |
+          if [ -f "scripts/language_switch.py" ]; then
+            echo "🔄 Language switch script found, setting default language..."
+            python3 scripts/language_switch.py
+          else
+            echo "ℹ️ Language switch script not found, skipping language switch"
+          fi
+
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Add all changed files
+          git add docs/README_EN-US.md
+          git add docs/README_ZH-CN.md
           git add README.md
-          if [ -f README_ZH-CN.md ]; then
-            git add README_ZH-CN.md
-          fi
           
           # Generate commit message
-          commit_msg="🤖 Auto-update: Update participant information"
-          if [ -f README_ZH-CN.md ]; then
-            commit_msg+=" and Chinese translation"
-          fi
+          commit_msg="🤖 Auto-update: Update participant information and language files"
           
           git commit -m "$commit_msg"
           git pull --rebase origin main

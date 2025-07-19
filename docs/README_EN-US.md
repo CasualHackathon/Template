@@ -1,41 +1,41 @@
 # Template Casual Hackathon
 
-[English](./README.md) | [简体中文](./README_ZH-CN.md)
+[English](/docs/README_EN-US.md) | [简体中文](/docs/README_ZH-CN.md)
 
 🧬 The Future of Template Is Calling You!
 
 
-## ⏰ 活动时间线
+## ⏰ Event Timeline
 
-`📍 线上` `☺️ 放松参与` `🙋 对所有人开放`
+`📍 Online` `☺️ Relaxed participation` `🙋 Open to everyone`
 
-| 活动           | 时间                  | 形式    | 回顾                |
+| Event           | Time                  | Format    | Recap                |
 | --------------- | --------------------- | --------- | ------------------------------ |
-| 🗓 **开放日**  | July 11, 21:18 (UTC+8) | 📍 线上 | [Play ▶️](https://example.com/) |
-| 🏁 **演示日** | July 13, 18:00 (UTC+8) | 📍 线上 |   [Play ▶️](https://example.com/)  |
+| 🗓 **Open Day**  | July 11, 21:18 (UTC+8) | 📍 Online | [Play ▶️](https://example.com/) |
+| 🏁 **Demo Day** | July 13, 18:00 (UTC+8) | 📍 Online |   [Play ▶️](https://example.com/)  |
 
 
-## 📝 参与者
+## 📝 Participants
 
 #### 👤 Bob
 
 `💬 Telegram: @bob_solidity21k9k_fork...`  `🔧 Solidity Developer`  `🕐 UTC+8`  
 - *Solidity developer with 2 years of experience in smart contract development, specializing in DeFi protocols and yield farming strategies* [🔗](./participants/Bob/README.md) 
-##### 项目： Yield Optimizer
+##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Bob/project/)  
 <table>
 <tr>
-    <th align="center">🧩 参与方式</th>
-    <th align="center">💪 团队成员</th>
-    <th align="center">🏁 进度</th>
-    <th align="center">🌱 状态 </th>
-    <th align="center">🏅 NFT徽章 </th>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Team Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
+    <th align="center">🏅 NFT Badge </th>
 </tr>
 <tr>
-    <td align="center">团队</td>
+    <td align="center">Team</td>
     <td align="center">alice, bob</td>
     <td align="center">30%</td>
-    <td align="center">⏳ 进行中</td>
+    <td align="center">✅ Submitted</td>
     <td align="center"><img src="./materials/NFT/Bob.png" alt="Bob" width="200" /></td>
 </tr>
 </table>
@@ -46,20 +46,20 @@
 
 `💬 Discord: alice_web3#12324`  `🔧 Frontend Developer`  `🕐 UTC+8`  
 - *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
-##### 项目： Yield Optimizer
+##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
 <table>
 <tr>
-    <th align="center">🧩 参与方式</th>
-    <th align="center">💪 团队成员</th>
-    <th align="center">🏁 进度</th>
-    <th align="center">🌱 状态 </th>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Team Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
 </tr>
 <tr>
-    <td align="center">个人</td>
+    <td align="center">Solo</td>
     <td align="center">Alice</td>
     <td align="center">80%</td>
-    <td align="center">✅ 已提交</td>
+    <td align="center">✅ Submitted</td>
 </tr>
 </table>
 
@@ -69,21 +69,21 @@
 
 `💬 Discord: david_web3#5678`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
 - *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/David/README.md) 
-##### 项目： NFT Marketplace
+##### Project: NFT Marketplace
 - *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/David/project/)  
 <table>
 <tr>
-    <th align="center">🧩 参与方式</th>
-    <th align="center">💪 团队成员</th>
-    <th align="center">🏁 进度</th>
-    <th align="center">🌱 状态 </th>
-    <th align="center">🏅 NFT徽章 </th>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Team Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
+    <th align="center">🏅 NFT Badge </th>
 </tr>
 <tr>
-    <td align="center">个人</td>
+    <td align="center">Solo</td>
     <td align="center">David</td>
     <td align="center">25%</td>
-    <td align="center">⏳ 进行中</td>
+    <td align="center">⏳ Active</td>
     <td align="center"><img src="./materials/NFT/David.png" alt="David" width="200" /></td>
 </tr>
 </table>
@@ -94,25 +94,25 @@
 
 `💬 Discord: david_web3#567822`  `🔧 Full-stack Developer`  `🕐 UTC+8`  
 - *Full-stack developer with 4 years of experience in Web3 development, specializing in React, Node.js, and smart contract integration* [🔗](./participants/Doubao/README.md) 
-##### 项目： NFT Marketplace
+##### Project: NFT Marketplace
 - *A decentralized NFT marketplace with advanced trading features and cross-chain compatibility* [📁](./participants/Doubao/project/)  
 <table>
 <tr>
-    <th align="center">🧩 参与方式</th>
-    <th align="center">💪 团队成员</th>
-    <th align="center">🏁 进度</th>
-    <th align="center">🌱 状态 </th>
+    <th align="center">🧩 Participation</th>
+    <th align="center">💪 Team Members</th>
+    <th align="center">🏁 Progress</th>
+    <th align="center">🌱 Status </th>
 </tr>
 <tr>
-    <td align="center">个人</td>
+    <td align="center">Solo</td>
     <td align="center">Doubao</td>
     <td align="center">25%</td>
-    <td align="center">⏳ 进行中</td>
+    <td align="center">⏳ Active</td>
 </tr>
 </table>
 
 
-## 🌟 嘉宾
+## 🌟 Guests
 
 
 
@@ -155,7 +155,7 @@
     </tr>
 </table>
 
-## 🤝 联合主办方
+## 🤝 Co-organizers
 
 <table>
     <tr>
@@ -177,7 +177,7 @@
     </tr>
 </table>
 
-## 🌐 社区支持
+## 🌐 Community Support
 
 <table>
     <tr>
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_最后更新： 2025-07-18 13:10:03_
+_Last updated: 2025-07-19 10:36:14_

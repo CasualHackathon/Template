@@ -61,8 +61,8 @@ def translate_content(content):
 def create_chinese_readme():
     """Create a Chinese version of the README file"""
     # Source file path
-    source_file = "README.md"
-    target_file = "README_ZH-CN.md"
+    source_file = "docs/README_EN-US.md"
+    target_file = "docs/README_ZH-CN.md"
     
     # Check if source file exists
     if not os.path.exists(source_file):

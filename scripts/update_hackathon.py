@@ -352,14 +352,14 @@ def update_hackathon():
     
     print(f"Found {len(participants)} participants")
 
-    # Update main README
-    readme_path = os.path.join(os.getcwd(), 'README.md')
+    # Update English README
+    readme_path = os.path.join(os.getcwd(), 'docs', 'README_EN-US.md')
     if os.path.exists(readme_path):
         update_participants_section(participants, readme_path)
     else:
-        print(f"README not found: {readme_path}")
+        print(f"docs/README_EN-US.md not found: {readme_path}")
 
-    print(f"Updated README file with {len(participants)} participants.")
+    print(f"Updated docs/README_EN-US.md file with {len(participants)} participants.")
     return True
 
 if __name__ == '__main__':
