@@ -163,7 +163,7 @@ def generate_participants_content(participants):
     if not participants:
         return "<!-- No participants registered yet -->"
     
-    # 解析结束时间配置
+    # parse end time
     end_time_utc8 = datetime.strptime(END_TIME_UTC8, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone(timedelta(hours=8)))
     current_time_utc8 = datetime.now(timezone(timedelta(hours=8)))
     
@@ -190,13 +190,13 @@ def generate_participants_content(participants):
             participation_type = "Solo"
             members_display = name if name else "~"
         
-        # Progress 只显示 project_progress 字段，不关联是否已提交
+        # Progress only show project_progress field, not related to whether it has been submitted
         if project_progress:
             progress = project_progress
         else:
             progress = "~"
         
-        # 判断状态：如果超过结束时间且未提交，则显示未提交
+        s# Determine status: if it exceeds the end time and has not been submitted, it will be displayed as not submitted
         if current_time_utc8 > end_time_utc8:
             if project_submitted:
                 status = "✅ Submitted"
