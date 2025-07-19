@@ -10,7 +10,6 @@ on:
       - 'materials/NFT/**'
       - 'docs/README_EN-US.md'
       - 'docs/README_ZH-CN.md'
-      - 'README.md'
   pull_request:
     branches:
       - main
@@ -46,9 +45,9 @@ jobs:
           
       - name: Translate to Chinese (if script exists)
         run: |
-          if [ -f "scripts/translate_to_chinese.py" ]; then
+          if [ -f "scripts/language_translate.py" ]; then
             echo "🌐 Translation script found, running translation..."
-            python3 scripts/translate_to_chinese.py
+            python3 scripts/language_translate.py
           else
             echo "ℹ️ Translation script not found, skipping translation"
           fi
