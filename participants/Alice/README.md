@@ -11,7 +11,7 @@ Do not remove the --- markers or change the field names.
 name: 'Alice' # Your name or nickname
 description: 'Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps' # Brief personal introduction including skills and experience (One sentence)
 contact_method: 'Discord' # Contact method: Telegram | WeChat | Discord | Email | X(Twitter) | GitHub
-contact: 'alice_web3#1111' # Your contact details, e.g., @username, email@example.com
+contact: 'alice_web3#1111aa' # Your contact details, e.g., @username, email@example.com
 wallet_address: '0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6' # Your wallet address or ENS domain on Ethereum mainnet
 role: 'Frontend Developer' # Primary skill role: Solidity Developer | Frontend Developer | Backend Developer | Full-stack Developer | Product Manager | UI/UX Designer | Test Engineer | Blockchain Researcher | etc.
 timezone: 'UTC+8' # Timezone, e.g., UTC+8, EST, PST (for team collaboration scheduling)
