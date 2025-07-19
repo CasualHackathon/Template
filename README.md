@@ -44,7 +44,7 @@
 
 #### 👤 Alice
 
-`💬 Discord: alice_web3#1111`  `🔧 Frontend Developer`  `🕐 UTC+8`  
+`💬 Discord: alice_web3#1111aa`  `🔧 Frontend Developer`  `🕐 UTC+8`  
 - *Frontend developer with 3 years of experience in React, Vue.js, and Web3 technologies, passionate about building user-friendly dApps* [🔗](./participants/Alice/README.md) 
 ##### Project: Yield Optimizer
 - *A DeFi yield optimization platform that automatically finds the best yield farming opportunities across multiple protocols* [📁](./participants/Alice/project/)  
@@ -209,4 +209,4 @@
     </tr>
 </table>
 
-_Last updated: 2025-07-19 03:34:19_
+_Last updated: 2025-07-19 03:37:05_
