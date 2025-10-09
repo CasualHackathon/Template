@@ -30,7 +30,8 @@ const FIELD_NAMES = {
         PROJECT_DESCRIPTION: 'Project Description',
         PROJECT_MEMBERS: 'Project Members',
         PROJECT_LEADER: 'Project Leader',
-        REPOSITORY_URL: 'Repository URL'
+        REPOSITORY_URL: 'Repository URL',
+        TEAM_MEMBERS_WALLET: 'Team Members Wallet'
     }
 };
 
