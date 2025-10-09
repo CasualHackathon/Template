@@ -15,4 +15,4 @@
 >alice,bob
 
 **Repository URL** (Open source repository URL - project must be open source)
->https://github.com/CasualHackathon/Template
+>
