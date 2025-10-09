@@ -16,3 +16,6 @@
 
 **Repository URL** (Open source repository URL - project must be open source)
 >
+
+**Team Members Wallet** (List all team members wallet, comma-separated e.g., Alice:0x12345... , Bob:0x12345...)
+>alice:0x123,Box:0x1233
